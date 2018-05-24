@@ -50,12 +50,12 @@
     }
     &__socials {
         white-space: nowrap;
-            margin-left: 14px;
-            display: flex;
-            align-items: center;
-            width: 181px;
-            padding-right: 22px;
-            justify-content: space-between;
+        margin-left: 14px;
+        display: flex;
+        align-items: center;
+        width: 181px;
+        padding-right: 22px;
+        justify-content: space-between;
         &__item {}
     }
 }
@@ -90,8 +90,8 @@
         width: 71%;
         display: flex;
         flex-wrap: wrap;
-        align-items: flex-end;
-        // padding-top: 9px;
+        align-items: flex-end; // padding-top: 9px;
+        $c: &;
         nav {
             width: 100%;
             ul {
@@ -106,6 +106,17 @@
                             color: #000;
                             text-shadow: 0px 0px 0px black;
                         }
+                        #{$c}__submenu {
+                            visibility: visible;
+                            top: 45px;
+                            opacity: 1;
+                            li {
+                                a {
+                                    text-shadow: none;
+                                    color: #464646;
+                                }
+                            }
+                        }
                     }
                     a {
                         // font-family: 'roboto-regular';
@@ -113,13 +124,44 @@
                         color: #464646;
                         display: block;
                         font-size: 16px;
-                        letter-spacing: 0px;
-                        // font-weight: 400;
+                        letter-spacing: 0px; // font-weight: 400;
                     }
                     &.active {
                         background: $c-green;
                         a {
                             color: #fff;
+                        }
+                    }
+
+                    #{$c}__submenu {
+                        display: flex;
+                        position: absolute;
+                        width: 200px;
+                        top: 25px;
+                        background: #fff;
+                        flex-wrap: wrap;
+                        z-index: 100;
+                        visibility: hidden;
+                        box-shadow: 0 0 3px 0px #666;
+                        transition: 0.2s;
+                        opacity: 0;
+                        li {
+                            border-bottom: none;
+                            width: 100%;
+                            a {
+                                padding: 5px 10px;
+                                font-size: 14px;
+                            }
+                            &.active {
+                                background: lighten($c-green-light, 20%);
+                            }
+                            &:hover {
+                                background: lighten($c-green-light, 20%);
+                                a {
+                                    // color: #000;
+                                    // text-shadow: 0px 0px 0px black;
+                                }
+                            }
                         }
                     }
                 }

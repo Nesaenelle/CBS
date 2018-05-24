@@ -26,7 +26,7 @@
                 <a href=""><i class="icon icon-you"></i></a>
             </div>
             <div class="feedback-form hidden">
-                <form action="">                
+                <form action="">
                     <input type="text" placeholder="* Ім'я" required>
                     <input type="text" placeholder="* Тел" required>
                     <textarea placeholder="* Повідомлення" required></textarea>
@@ -46,9 +46,32 @@
                 <nav>
                     <ul>
                         <li><a href="index.html">ГОЛОВНА</a></li>
-                        <li><a href="about.html">ПРО НАС</a></li>
-                        <li><a href="">КОРИСТУВАЧАМ</a></li>
-                        <li><a href="">КРАЄЗНАВСТВО</a></li>
+                        <li>
+                            <a href="history.html">ПРО НАС</a>
+                            <ul class="sub-header__menu__submenu">
+                               <li><a href="history.html">- Історія ЦБС</a></li>
+                               <li><a href="our_branches.html">- Наші філії</a></li>
+                               <li><a href="">- ЦОГЕІ</a></li>
+                               <li><a href="about.html">- Про нас пишуть</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="exhibitions.html">КОРИСТУВАЧАМ</a>
+                            <ul class="sub-header__menu__submenu">
+                               <li><a href="exhibitions.html">- Віртуальні виставки</a></li>
+                               <li><a href="contests.html">- Конкурси</a></li>
+                               <li><a href="computer-courses.html">- Комп’ютерні курси</a></li>
+                               <li><a href="usefull_links.html">- Корисні посилання</a></li>
+                            </ul>   
+                        </li>
+                        <li>
+                            <a href="sign-dates.html">КРАЄЗНАВСТВО</a>
+                            <ul class="sub-header__menu__submenu">
+                               <li><a href="sign-dates.html">- Знаменні та пам’ятні дати</a></li>
+                               <li><a href="our_branches.html">- Новинки краєзнавчої літератури</a></li>
+                               <li><a href="our_publications.html">- Наші видання</a></li>
+                            </ul>                    
+                        </li>
                         <li><a href="reference.html">ДОВІДКА</a></li>
                         <li class="active"><a href="contacts.html">КОНТАКТИ</a></li>
                     </ul>
@@ -61,7 +84,9 @@
             <sidebar class="main-content__left">
                 <ul class="main-content__sidebar__list">
                     <li>
-                        <div class="main-content__sidebar__list__item">НОВИНИ ТА ПОДІЇ</div>
+                        <a href="news.html">
+                            <div class="main-content__sidebar__list__item">НОВИНИ ТА ПОДІЇ</div>
+                        </a>
                     </li>
                     <li>
                         <a href="events_poster.html">
@@ -69,13 +94,17 @@
                         </a>
                     </li>
                     <li>
-                        <div class="main-content__sidebar__list__item">НОВІ КНИГИ ТА ПЕРІОДИКА</div>
+                        <div class="main-content__sidebar__list__item" data-toggle-menu>НОВІ КНИГИ ТА ПЕРІОДИКА</div>
+                        <ul>
+                            <li><a href="new_books.html">- Книги</a></li>
+                            <li><a href="periodicals.html">- Періодика</a></li>
+                        </ul>
                     </li>
                     <li>
                         <div class="main-content__sidebar__list__item" data-toggle-menu>МЕДІА</div>
                         <ul>
                             <li><a href="video-gallery.html">- Відеогалерея</a></li>
-                            <li>- Презентації</li>
+                            <li><a href="presentations.html">- Презентації</a></li>
                             <li><a href="photo-gallery.html">- Фотогалерея</a></li>
                         </ul>
                     </li>
@@ -93,14 +122,36 @@
                 <div class="main-content__body">
                     <div class="main-content__body__secondary-title">КОНТАКТИ ЦБС РІВНОГО</div>
                     <div class="info-block">
-
-<!--                         <div class="pagination">
-                            <div class="pagination__item active">1</div>
-                            <div class="pagination__item">2</div>
-                            <div class="pagination__item">3</div>
-                            <div class="pagination__item">4</div>
-                            <div class="pagination__item">5</div>
-                        </div> -->
+                        <div class="contacts">
+                            <div class="contacts__left">
+                                <div class="contacts__phone">
+                                    <i class="icon icon-smart-phone"></i> +38 (0362) 23-51-52 <br>(директор - Гупалюк Вікторія Олександрівна)
+                                </div>
+                                <div class="contacts__address">
+                                   <i class="icon icon-marker"></i>  33000, м. Рівне <br>вул. Київська, 44
+                                </div>
+                                <div class="contacts__socials">
+                                    <a href=""><i class="icon icon-share"></i></a>
+                                    <a href=""><i class="icon icon-inst-dark"></i></a>
+                                    <a href=""><i class="icon icon-fb-dark"></i></a>
+                                    <a href=""><i class="icon icon-gplus-dark"></i></a>
+                                </div>
+                            </div>
+                            <div class="contacts__right">
+                                <form action="">
+                                    <div class="contacts__form-title">Написати листа</div>
+                                    <input type="text" placeholder="* Ім'я" required>
+                                    <input type="text" placeholder="* E-mail" required>
+                                    <input type="text" placeholder="* Тема запитання" required>
+                                    <textarea placeholder="* Повідомлення" required></textarea>
+                                    <div class="flex j-c-s-b mt-10">                                    
+                                        <div class="contacts__small-text"> Всі поля з зірочкою (*) <br> обов'язкові для заповнення.</div>
+                                        <button class="btn transparent">НАДІСЛАТИ</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div id="map"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -156,6 +207,21 @@
     <link rel="stylesheet" href="dist/style.css">
     <!-- <link rel="stylesheet" href="fonts/fontawesome/web-fonts-with-css/css/fontawesome-all.min.css"> -->
     <script src="dist/all.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap">
+    </script>
+    <script>
+    function initMap() {
+        var uluru = { lat: 50.611461, lng: 26.2843341 };
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 17,
+            center: uluru
+        });
+        // var marker = new google.maps.Marker({
+        //     position: uluru,
+        //     map: map
+        // });
+    }
+    </script>
 </body>
 
 </html>

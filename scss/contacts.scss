@@ -1,0 +1,86 @@
+.contacts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 20px;
+    input {
+        margin-bottom: 14px;
+        width: 100%;
+        padding: 11px 10px;
+        font-size: 14px;
+        font-family: 'Roboto Condensed', sans-serif;
+    }
+    textarea {
+        font-family: 'Roboto Condensed', sans-serif;
+        padding: 12px 10px;
+        width: 100%;
+        resize: none;
+        height: 232px;
+        margin-bottom: 10px;
+        margin-top: 5px;
+        font-size: 14px;
+    }
+    .btn {
+        float: right;
+        margin-top: 0px;
+        border-width: 2px;
+        padding: 6px 23px;
+        font-size: 15px;
+    }
+    &__phone {
+        font-size: 16px;
+        padding-left: 30px;
+        position: relative;
+        margin-bottom: 20px;
+        margin-left: 10px;
+        .icon {
+            left: 0;
+            margin-top: 2px;
+            position: absolute;
+        }
+    }
+    &__address {
+        font-size: 16px;
+        padding-left: 30px;
+        position: relative;
+        margin-left: 10px;
+        margin-bottom: 20px;
+        .icon {
+            left: 0;
+            margin-top: 2px;
+            position: absolute;
+        }
+    }
+    &__socials {
+        width: 155px;
+        display: flex;
+        align-items: center;;
+        justify-content: space-between;
+        margin-left: 10px;
+        .icon-share {
+            width: 20px;
+            height: 20px;
+        }
+    }
+    &__form-title {
+        font-size: 20px;
+        color: $c-green;
+        margin-bottom: 20px;
+    }
+    &__left {
+        width: 48%;
+    }
+    &__right {
+        width: 45%;
+    }
+    &__small-text {
+        font-size: 12px;
+    }
+
+
+    #map {
+        height: 400px;
+        width: 100%;
+        margin-top: 50px;
+    }
+}

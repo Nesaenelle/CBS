@@ -46,9 +46,32 @@
                 <nav>
                     <ul>
                         <li><a href="index.html">ГОЛОВНА</a></li>
-                        <li><a href="about.html">ПРО НАС</a></li>
-                        <li><a href="">КОРИСТУВАЧАМ</a></li>
-                        <li><a href="">КРАЄЗНАВСТВО</a></li>
+                        <li>
+                            <a href="history.html">ПРО НАС</a>
+                            <ul class="sub-header__menu__submenu">
+                               <li><a href="history.html">- Історія ЦБС</a></li>
+                               <li><a href="our_branches.html">- Наші філії</a></li>
+                               <li><a href="">- ЦОГЕІ</a></li>
+                               <li><a href="about.html">- Про нас пишуть</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="exhibitions.html">КОРИСТУВАЧАМ</a>
+                            <ul class="sub-header__menu__submenu">
+                               <li><a href="exhibitions.html">- Віртуальні виставки</a></li>
+                               <li><a href="contests.html">- Конкурси</a></li>
+                               <li><a href="computer-courses.html">- Комп’ютерні курси</a></li>
+                               <li><a href="usefull_links.html">- Корисні посилання</a></li>
+                            </ul>   
+                        </li>
+                        <li>
+                            <a href="sign-dates.html">КРАЄЗНАВСТВО</a>
+                            <ul class="sub-header__menu__submenu">
+                               <li><a href="sign-dates.html">- Знаменні та пам’ятні дати</a></li>
+                               <li><a href="our_branches.html">- Новинки краєзнавчої літератури</a></li>
+                               <li><a href="our_publications.html">- Наші видання</a></li>
+                            </ul>                    
+                        </li>
                         <li><a href="reference.html">ДОВІДКА</a></li>
                         <li><a href="contacts.html">КОНТАКТИ</a></li>
                     </ul>
@@ -61,7 +84,9 @@
             <sidebar class="main-content__left">
                 <ul class="main-content__sidebar__list">
                     <li>
-                        <div class="main-content__sidebar__list__item">НОВИНИ ТА ПОДІЇ</div>
+                        <a href="news.html">
+                            <div class="main-content__sidebar__list__item">НОВИНИ ТА ПОДІЇ</div>
+                        </a>
                     </li>
                     <li class="active">
                         <a href="events_poster.html">
@@ -69,13 +94,17 @@
                         </a>
                     </li>
                     <li>
-                        <div class="main-content__sidebar__list__item">НОВІ КНИГИ ТА ПЕРІОДИКА</div>
+                        <div class="main-content__sidebar__list__item" data-toggle-menu>НОВІ КНИГИ ТА ПЕРІОДИКА</div>
+                        <ul>
+                            <li><a href="new_books.html">- Книги</a></li>
+                            <li><a href="periodicals.html">- Періодика</a></li>
+                        </ul>
                     </li>
                     <li>
                         <div class="main-content__sidebar__list__item" data-toggle-menu>МЕДІА</div>
                         <ul>
                             <li><a href="video-gallery.html">- Відеогалерея</a></li>
-                            <li>- Презентації</li>
+                            <li><a href="presentations.html">- Презентації</a></li>
                             <li><a href="photo-gallery.html">- Фотогалерея</a></li>
                         </ul>
                     </li>

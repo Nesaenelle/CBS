@@ -1,0 +1,88 @@
+.reference {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0px 20px;
+    form {
+        width: 60%;
+    }
+    input {
+        margin-bottom: 14px;
+        width: 100%;
+        padding: 11px 10px;
+        font-size: 14px;
+        font-family: 'Roboto Condensed', sans-serif;
+    }
+    textarea {
+        font-family: 'Roboto Condensed', sans-serif;
+        padding: 12px 10px;
+        width: 100%;
+        resize: none;
+        height: 232px;
+        margin-bottom: 10px;
+        margin-top: 5px;
+        font-size: 14px;
+    }
+    .btn {
+        float: right;
+        margin-top: 0px;
+        border-width: 2px;
+        padding: 6px 23px;
+        font-size: 15px;
+    }
+    &__form-title {
+        font-size: 20px;
+        color: $c-green;
+        margin-bottom: 20px;
+    }
+    &__small-text {
+        font-size: 12px;
+    }
+    &__list {
+        margin-top: 70px;
+        width: 100%;
+    }
+    &__item {
+        border-bottom: 1px solid #C6C6C6;
+        padding-bottom: 15px;
+        margin-bottom: 19px; // display: flex;
+        // flex-wrap: wrap;
+        &__date {
+            font-size: 12px;
+            display: inline-block;
+        }
+        &__name {
+            display: inline-block;
+            margin-left: 12px;
+            color: $c-green;
+        }
+        &__question {
+            width: 100%;
+            margin-top: 10px;
+            padding-left: 35px;
+            color: $c-dark-text;
+            position: relative;
+            &:before {
+                content: '';
+                background: url(../img/quotes.png) no-repeat;
+                background-size: contain;
+                width: 19px;
+                height: 19px;
+                position: absolute;
+                font-size: 42px;
+                color: $c-green;
+                left: 0;
+                top: 2px;
+            }
+        }
+        &__answer {
+            width: 100%;
+            padding-left: 70px;
+            margin-top: 7px;
+            font-style: italic;
+            font-size: 15px;
+            letter-spacing: 0.1px;
+            color: $c-light-text;
+        }
+    }
+}
