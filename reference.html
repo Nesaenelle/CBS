@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CBS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <!-- <div class="header__top"> -->
+        <div class="container">
+            <div class="header__phone"><i class="icon icon-phone"></i>+38 (0362) 23-51-52</div>
+            <div class="input">
+                <i class="icon icon-search"></i>
+                <input type="text" placeholder="Пошук по сайту">
+            </div>
+            <button class="btn" id="feedback-form-btn"><i class="icon icon-messenge"></i>НАПИСАТИ НАМ</button>
+            <div class="header__socials">
+                <a href=""><i class="icon icon-inst"></i></a>
+                <a href=""><i class="icon icon-fb"></i></a>
+                <a href=""><i class="icon icon-tw"></i></a>
+                <a href=""><i class="icon icon-you"></i></a>
+            </div>
+            <div class="feedback-form hidden">
+                <form action="">                
+                    <input type="text" placeholder="* Ім'я" required>
+                    <input type="text" placeholder="* Тел" required>
+                    <textarea placeholder="* Повідомлення" required></textarea>
+                    <button class="btn transparent">НАДІСЛАТИ</button>
+                </form>
+            </div>
+        </div>
+        <!-- </div> -->
+    </header>
+    <div class="sub-header">
+        <div class="container">
+            <div class="sub-header__logo">
+                <a href="#"><img src="img/logo_header.png" alt=""> </a>
+            </div>
+            <div class="sub-header__menu">
+                <div class="sub-header__title">ЦЕНТРАЛІЗОВАНА БІБЛІОТЕЧНА СИСТЕМА МІСТА РІВНОГО</div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">ГОЛОВНА</a></li>
+                        <li><a href="about.html">ПРО НАС</a></li>
+                        <li><a href="">КОРИСТУВАЧАМ</a></li>
+                        <li><a href="">КРАЄЗНАВСТВО</a></li>
+                        <li class="active"><a href="reference.html">ДОВІДКА</a></li>
+                        <li><a href="contacts.html">КОНТАКТИ</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <main class="main-content">
+        <div class="container">
+            <sidebar class="main-content__left">
+                <ul class="main-content__sidebar__list">
+                    <li>
+                        <div class="main-content__sidebar__list__item">НОВИНИ ТА ПОДІЇ</div>
+                    </li>
+                    <li>
+                        <a href="events_poster.html">
+                            <div class="main-content__sidebar__list__item">АФІША ПОДІЙ</div>
+                        </a>
+                    </li>
+                    <li>
+                        <div class="main-content__sidebar__list__item">НОВІ КНИГИ ТА ПЕРІОДИКА</div>
+                    </li>
+                    <li>
+                        <div class="main-content__sidebar__list__item" data-toggle-menu>МЕДІА</div>
+                        <ul>
+                            <li><a href="video-gallery.html">- Відеогалерея</a></li>
+                            <li>- Презентації</li>
+                            <li><a href="photo-gallery.html">- Фотогалерея</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="main-content__sidebar__list__item">ЕЛЕКТРОННИЙ КАТАЛОГ</div>
+                    </li>
+                    <li>
+                        <a href="blog.html">
+                            <div class="main-content__sidebar__list__item">БЛОГ</div>
+                        </a>
+                    </li>
+                </ul>
+            </sidebar>
+            <div class="main-content__right">
+                <div class="main-content__body">
+                    <div class="main-content__body__secondary-title">ДОВІДКА</div>
+                    <div class="info-block">
+
+<!--                         <div class="pagination">
+                            <div class="pagination__item active">1</div>
+                            <div class="pagination__item">2</div>
+                            <div class="pagination__item">3</div>
+                            <div class="pagination__item">4</div>
+                            <div class="pagination__item">5</div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="contacts-block">
+        <div class="container">
+            <div class="contacts-block__list">
+                <div class="relative">
+                    <i class="icon icon-smart-phone"></i>
+                    <div class="contacts-block__list__item">+38 (0362) 23-51-52</div>
+                    <div class="contacts-block__list__item">+38 (0362) 23-51-52</div>
+                    <div class="contacts-block__list__item">+38 (0362) 23-51-52</div>
+                </div>
+            </div>
+            <div class="contacts-block__list">
+                <div class="relative">
+                    <i class="icon icon-marker"></i>
+                    <div class="contacts-block__list__item">33000, м. Рівне</div>
+                    <div class="contacts-block__list__item">вул. Київська, 44</div>
+                </div>
+            </div>
+            <div class="contacts-block__list">
+                <div class="relative">
+                    <i class="icon icon-clock"></i>
+                    <div class="contacts-block__list__item">Пн-Чт: 9.00-18.00</div>
+                    <div class="contacts-block__list__item">Пт: 9.00-17.00</div>
+                    <div class="contacts-block__list__item">Сб, Нд: Вихідний</div>
+                </div>
+            </div>
+            <div class="contacts-block__list">
+                <div class="relative">
+                    <div class="contacts-block__list__item">Офіційні веб-сайти:</div>
+                    <div class="contacts-block__list__images">
+                        <img src="img/upr_turizmu.png" alt="">
+                        <img src="img/miska_rada.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="copyright">© ЦЕНТРАЛЬНА БІБЛІОТЕЧНА СИСТЕМА РІВНОГО 2018</div>
+            <div class="footer__right">
+                <a href=""><img src="img/hz.png" alt=""></a>
+                <div class="footer__development">Розробка веб сайту</div>
+                <a href="http://mozar.com.ua/"><img src="img/mozar.png" alt=""></a>
+                <div class="go-top-btn" id="go-top"><img src="img/top-btn.png" alt=""></div>
+            </div>
+        </div>
+    </footer>
+    <link rel="stylesheet" href="dist/style.css">
+    <!-- <link rel="stylesheet" href="fonts/fontawesome/web-fonts-with-css/css/fontawesome-all.min.css"> -->
+    <script src="dist/all.js"></script>
+</body>
+
+</html>

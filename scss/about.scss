@@ -1,0 +1,25 @@
+.about-block {
+	&__item {
+		border-bottom: 1px solid #C6C6C6;
+		margin-bottom: 17px;
+		padding-bottom: 10px;
+		&__date{
+			margin-top: 10px;
+			font-size: 12px;
+			color: $c-dark-text;
+		}
+		&__title {
+			color: $c-green;
+			font-size: 16px;
+			margin-top: 6px;
+			letter-spacing: .3px;
+			&:hover {
+				text-shadow: 0 0 0 $c-green;
+			}
+		}
+		&__descr {
+			font-size: 14px;
+			margin-top: 5px;
+		}
+	}
+}

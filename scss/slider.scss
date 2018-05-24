@@ -1,0 +1,159 @@
+.slider {
+    max-height: 400px;
+    margin-bottom: 70px;
+    position: relative; //     img {
+    // width: 100%;
+    //     }
+    &__inner {
+        overflow: hidden;
+        font-size: 0;
+        max-height: 400px;
+    }
+    &__scrollable {
+        display: flex;
+        transition: 0.3s;
+    }
+    &__item {
+        position: relative;
+        max-height: 400px;
+        width: 100%;
+        &__descr {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            font-size: 20px;
+            color: #fff;
+            padding: 20px;
+            line-height: 25px;
+            background: $c-green-trans;
+        }
+    }
+    &__controls {
+        position: absolute;
+        bottom: -40px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        &__item {
+            cursor: pointer;
+            border-radius: 100%;
+            width: 20px;
+            height: 20px;
+            background: #fff;
+            margin: 0px 8px;
+            background: $c-green-light;
+            &.active {
+                background: $c-green;
+            }
+        }
+    }
+
+    &.slider-mini {
+        margin-bottom: 15px;
+        margin: 0 32px;
+        .slider__item {
+            min-width: 100%;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            cursor: pointer;
+            img {
+                width: 100%;
+            }
+        }
+        .slider__item__date {
+            font-size: 12px;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .slider__item__descr {
+            position: static;
+            background: none;
+            font-size: 16px;
+            color: #9AB121;
+            text-align: center;
+            padding: 7px 0;
+        }
+        .slider__controls {
+            // top: 0;
+            // bottom: 42px;
+            // height: 41px;
+            // margin: auto;
+            &__left,
+            &__right {}
+            &__left {
+                position: absolute;
+                left: -25px;
+                width: 40px;
+                height: 40px;
+                transform: rotate(180deg);
+                background: url(../img/arrow.png);
+                background-size: cover;
+                cursor: pointer;
+                top: 0;
+                bottom: 42px;
+                margin: auto;
+            }
+            &__right {
+                right: -25px;
+                width: 40px;
+                height: 40px;
+                position: absolute;
+                background: url(../img/arrow.png);
+                background-size: cover;
+                cursor: pointer;
+                top: 0;
+                bottom: 42px;
+                margin: auto;
+            }
+        }
+    }
+    &__preview {
+        &__overlay {
+            top: 0;
+            left: 0;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, .4);
+        }
+        &__content {
+            @include absolute-center;
+            box-shadow: 0 0 10px 0 #000;
+            position: fixed;
+            width: 600px;
+            height: 500px;
+            background: #fff;
+            padding: 40px;
+            border-radius: 10px;
+        }
+        &__close {
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            background: url(../img/close.png);
+            background-size: contain;
+            cursor: pointer;
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+        &__img {
+            width: 100%;
+            height: 400px;
+            background-repeat: no-repeat!important;
+            background-position: center!important;
+            // background-size: cover!important;
+        }
+        &__title {
+            text-align: center;
+            color: #9AB121;
+            font-size: 16px;
+            margin-top: 20px;
+            letter-spacing: .3px;
+        }
+    }
+}
