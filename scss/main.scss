@@ -409,6 +409,7 @@ a {
     flex-wrap: wrap;
     align-items: center;
     img {
+        cursor: pointer;
         width: calc(100%/4 - 5px);
         margin-bottom: 5px;
     }
@@ -623,12 +624,12 @@ a {
             justify-content: space-between;
             align-items: center;
             margin-top: 10px;
-            img {
-                &:first-child {
+            a {
+                &:first-child img{
                     width: 198px;
                     margin-right: 40px;
                 }
-                &:last-child {
+                &:last-child img {
                     width: 148px;
                 }
             }

@@ -57,15 +57,6 @@
         var scroller = slider.querySelector('.slider__scrollable');
         var width = slider.offsetWidth;
         var curSlide = 0;
-        var previewWindow;
-
-        slides.forEach(function(slide, index) {
-            slide.setAttribute('data-id', index);
-            slide.addEventListener('click', function(e) {
-                e.stopPropagation();
-                openPreview(this.getAttribute('data-src'), this.getAttribute('data-title'));
-            });
-        });
 
         function goTo(index) {
             if (index > slides.length - 1) {
@@ -79,29 +70,6 @@
             curSlide = index;
         }
 
-        function openPreview(src, title) {
-            if (previewWindow) previewWindow.remove();
-            previewWindow = document.createElement('div');
-            previewWindow.className = 'slider__preview';
-            previewWindow.innerHTML = '<div class="slider__preview__overlay">  </div>\
-             <div class="slider__preview__content">\
-                <div class="slider__preview__close"></div>\
-                <div class="slider__preview__img" style="background: url(' + src + ')"></div>\
-                <div class="slider__preview__title">' + title + '</div>\
-            </div>';
-
-            previewWindow.querySelector('.slider__preview__close').addEventListener('click', function(e) {
-                previewWindow.remove();
-            });
-            document.body.appendChild(previewWindow);
-        }
-
-        window.addEventListener('click', function(e) {
-            if (previewWindow && !previewWindow.querySelector('.slider__preview__content').contains(e.target)) {
-                previewWindow.remove();
-            }
-        }, false);
-
         controlLeft.addEventListener('click', function() {
             goTo(curSlide - 1);
         }, false);
@@ -114,7 +82,74 @@
     }
 }());
 
+(function() {
+    var gallery = document.querySelector('[data-gallery]');
+    var previewWindow;
+    var curSlide = 0;
+    var image;
 
+    if (gallery) {
+        var collection = gallery.querySelectorAll('[data-src]');
+
+        collection.forEach(function(item, index) {
+            item.setAttribute('data-id', index);
+            item.addEventListener('click', function(e) {
+                e.stopPropagation();
+                curSlide = index;
+                openPreview(this.getAttribute('data-src'), this.getAttribute('data-title'));
+            });
+        });
+
+        function openPreview(src, title) {
+            if (previewWindow) previewWindow.remove();
+            previewWindow = document.createElement('div');
+            previewWindow.className = 'slider__preview';
+            previewWindow.innerHTML = '<div class="slider__preview__overlay">  </div>\
+             <div class="slider__preview__content">\
+                <div class="slider__preview__close"></div>\
+                <div class="slider__preview__left"></div>\
+                <div class="slider__preview__right"></div>\
+                <div class="slider__preview__img" style="background: url(' + src + ')"></div>\
+                <div class="slider__preview__title">' + title + '</div>\
+            </div>';
+
+            image = previewWindow.querySelector('.slider__preview__img');
+
+            previewWindow.querySelector('.slider__preview__close').addEventListener('click', function(e) {
+                previewWindow.remove();
+            });
+
+            previewWindow.querySelector('.slider__preview__left').addEventListener('click', function() {
+                goTo(curSlide - 1);
+            }, false);
+            previewWindow.querySelector('.slider__preview__right').addEventListener('click', function() {
+                goTo(curSlide + 1);
+            }, false);
+
+            document.body.appendChild(previewWindow);
+        }
+
+
+        function goTo(index) {
+            if (index > collection.length - 1) {
+                index = 0;
+            }
+            if (index < 0) {
+                index = collection.length - 1;
+            }
+
+            image.style.background = 'url(' + collection[index].getAttribute('data-src') + ')';
+            curSlide = index;
+        }
+
+
+        window.addEventListener('click', function(e) {
+            if (previewWindow && !previewWindow.querySelector('.slider__preview__content').contains(e.target)) {
+                previewWindow.remove();
+            }
+        }, false);
+    }
+}());
 
 
 (function() {
@@ -129,7 +164,7 @@
                 if (scrollTop <= 0) {
                     clearInterval(interval);
                 } else {
-                    document.body.scrollTop  = scrollTop - 15;//scrollTo(0, scrollTop - 15);
+                    document.body.scrollTop = scrollTop - 15; //scrollTo(0, scrollTop - 15);
                     document.documentElement.scrollTop = scrollTop - 15;
                 }
             }, 0);
